@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tablero de Puntuación </title>
+  <style>
+    .scoreboard {
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+
+    .score {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="scoreboard">
+    <h1>Tablero de Puntuación BuscaCovid</h1>
+    <div class="score" id="scoreDisplay">0</div>
+    <button class="button" onclick="incrementarPuntuacion()">Incrementar</button>
+    <button class="button" onclick="reiniciarPuntuacion()">Reiniciar</button>
+  </div>
+
+  <script>
+    var scoreDisplay = document.getElementById("scoreDisplay");
+    var puntuacion = 0;
+
+    function incrementarPuntuacion() {
+      puntuacion++;
+      scoreDisplay.textContent = puntuacion;
+    }
+
+    function reiniciarPuntuacion() {
+      puntuacion = 0;
+      scoreDisplay.textContent = puntuacion;
+    }
+  </script>
+</body>
+</html>
+    
+  
+  
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
