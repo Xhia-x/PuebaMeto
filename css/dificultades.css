@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .difficulty {
+    padding: 10px 20px;
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .difficulty:hover {
+    background-color: #ccc;
+  }
