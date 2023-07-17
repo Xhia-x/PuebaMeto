@@ -1,0 +1,28 @@
+let casillas = []; 
+
+function revelarCasillas(casilla) {
+        const idCasilla = parseInt(casilla.id);
+        const estaBordeIzq = (idCasilla % width === 0);             // => Casilla está en el borde izq
+        const estaBordeDech = (idCasilla % width === width - 1);    // => Casilla está en el borde dech
+
+        setTimeout(() => {
+
+            if (idCasilla > 0 && !estaBordeIzq) click(casillas[idCasilla-1]);
+                    
+
+            if (idCasilla < (width*width-2) && !estaBordeDech) click(casillas[idCasilla+1]);
+
+            if (idCasilla >= width) click(casillas[idCasilla-width]);
+            
+            if (idCasilla > (width-1) && !estaBordeDech) click(casillas[idCasilla+1-width]);
+            
+            if (idCasilla > (width+1) && !estaBordeIzq) click(casillas[idCasilla-1-width]);
+
+            if (idCasilla < (width*(width-1))) click(casillas[idCasilla+width]);
+
+            if (idCasilla < (width*width-width-2) && !estaBordeDech) click(casillas[idCasilla+1+width]);
+            
+            if (idCasilla < (width*width-width) && !estaBordeIzq) click(casillas[idCasilla-1+width]);
+
+        }, 10);
+    }
